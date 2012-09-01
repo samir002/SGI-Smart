@@ -3,9 +3,9 @@ deviceready = function(){
 	
 	captureSite = function(){
 		
-	}
+	};
 }
 
 $(document).ready(function(){
-	document.addEventListener('deviceready', deviceready, false);
+	document.addEventListener('deviceready', deviceready, true);
 });
