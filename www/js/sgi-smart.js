@@ -1,11 +1,11 @@
-var app = {
-	initialize: function() {
-		this.bind();
-	},
-	bind: function() {
-        document.addEventListener('deviceready', this.deviceready, false);
-    },
-    deviceready: function() {
-    	navigator.notification.alert('I\'m Hello worlding!!');
-    }
+deviceready = function(){
+	navigator.notification.alert('Hello, i\'m hello worlding!!');
+	
+	captureSite = function(){
+		
+	}
 }
+
+$(document).ready(function(){
+	document.addEventListener('deviceready', deviceready, false);
+});
