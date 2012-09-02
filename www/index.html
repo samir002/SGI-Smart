@@ -26,12 +26,24 @@
 	</div>
 	<div data-role="page" id="capture-site">
 		<div data-role="header">
-			<h1>No se que estoy haciendo</h1>
+			<h1>Agregar un sitio</h1>
 		</div>
 
 		<div data-role="content">
-			<h2>Espero que todo funcione</h2>
-			<img alt="Testing" src="img/test-img.jpg">
+			<h2>Datos del sitio</h2>
+			<form id="datos_sitio">
+			<label for="codigo">Identificador(Código):</label>
+    		<input type="text" name="codigo" id="codigo" value=""  />
+    		<label for="descripcion">Descripción:</label>
+    		<textarea name="descripcion" id="descripcion"></textarea>
+			<button type="button" id="tomar-foto">Tomar una foto</button>
+			<label for="fotos">Fotos:</label>
+    		<textarea name="fotos" id="fotos"></textarea>
+    		<label for="latitud">Latitud:</label>
+    		<input type="text" name="latitud" id="latitud" value=""  />
+    		<label for="longitud">Longitud:</label>
+    		<input type="text" name="longitud" id="longitud" value=""  />
+			</form>
 		</div>
 	</div>
 </body>
