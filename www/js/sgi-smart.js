@@ -15,15 +15,15 @@ captureSuccess = function(mediaFiles){
 };
 
 var geoSuccess = function(position) {
-	$('#latitud').val($(position.coords.latitude);
-	$('#longitud').val($(position.coords.longitude);
+	$('#latitud').val(position.coords.latitude);
+	$('#longitud').val(position.coords.longitude);
 };
 
 deviceready = function(){
-	navigator.geolocation.getCurrentPosition(geoSuccess, error, {maximumAge: 3000, timeout: 10000, enableHighAccuracy: true});
+	navigator.geolocation.getCurrentPosition(geoSuccess, error);
 	
 	$('#tomar-foto').bind('click', function(event, ui){
-		navigator.device.capture.captureImage(captureSuccess, error, {limit:2});
+		navigator.device.capture.captureImage(captureSuccess, error, {limit:1});
 	});
 };
 
