@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.lpsa.sgi-smart"
-        version   = "0.0.9">
+        version   = "0.0.10">
     <name>SGI Smart</name>
 
     <description>
@@ -23,6 +23,10 @@
     <preference name="target-device"    value="universal" />
     <preference name="fullscreen"       value="false" />
 
+    <preference name="android-minSdkVersion" value="7" />
+    
+    <access origin="http://latinosoft.co" subdomains="true" />
+    
     <icon src="icon.png" />
     <icon src="res/icon/android/icon-36-ldpi.png"   gap:platform="android"    gap:density="ldpi" />
     <icon src="res/icon/android/icon-48-mdpi.png"   gap:platform="android"    gap:density="mdpi" />
