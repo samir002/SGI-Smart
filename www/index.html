@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>SGI Smart</title>
+<meta charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.1.1.min.css" />
 <link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.1.1.min.css" />
 <link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -32,16 +33,17 @@
 		<div data-role="content">
 			<h2>Datos del sitio</h2>
 			<form id="datos_sitio">
-			<label for="codigo">Identificador(Código):</label>
+			<label for="codigo">Identificador(CÃ³digo):</label>
     		<input type="text" name="codigo" id="codigo" value=""  />
-    		<label for="descripcion">Descripción:</label>
+    		<label for="descripcion">DescripciÃ³n:</label>
     		<textarea name="descripcion" id="descripcion"></textarea>
-			<button type="button" id="tomar-foto">Tomar una foto</button>
+			<button type="button" id="tomar-foto">Adjuntar una foto</button>
 			<div id="fotos"></div>
     		<label for="latitud">Latitud:</label>
     		<input type="text" name="latitud" id="latitud" value=""  />
     		<label for="longitud">Longitud:</label>
     		<input type="text" name="longitud" id="longitud" value=""  />
+    		<button type="button" id="upload-info">Subir a la web</button>
 			</form>
 		</div>
 	</div>
