@@ -21,7 +21,7 @@ var geoSuccess = function(position) {
 deviceready = function(){
 	navigator.geolocation.watchPosition(geoSuccess, errorLog, { maximumAge: 3000, timeout: 15000, enableHighAccuracy: true });
 	$('#tomar-foto').bind('click', function(event, ui){
-		navigator.camera.getPicture(pictureSuccess, error, { sourceType: Camera.PictureSourceType.PHOTOLIBRARY, destinationType: Camera.DestinationType.FILE_URI });
+		navigator.camera.getPicture(pictureSuccess, error, { quality: 20, targetWidth: 720, destinationType: Camera.DestinationType.FILE_URI });
 	});
 	$('#upload-info').bind('click', function(event, ui){
 		
