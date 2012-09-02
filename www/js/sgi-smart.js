@@ -10,7 +10,7 @@ captureSuccess = function(mediaFiles){
         if(i > 0)
         	$('#fotos').val($('#fotos').val() + '\n' + path);
         else
-        	$('#fotos').val($(path);
+        	$('#fotos').val(path);
     }
 };
 
@@ -20,13 +20,13 @@ var geoSuccess = function(position) {
 };
 
 deviceready = function(){
-	navigator.geolocation.getCurrentPosition(geoSuccess, error, { maximumAge: 3000, timeout: 10000, enableHighAccuracy: true });
+	navigator.geolocation.getCurrentPosition(geoSuccess, error, {maximumAge: 3000, timeout: 10000, enableHighAccuracy: true});
 	
 	$('#tomar-foto').bind('click', function(event, ui){
 		navigator.device.capture.captureImage(captureSuccess, error, {limit:2});
 	});
-}
+};
 
 $(document).bind('pageinit', function(){
-	document.addEventListener('deviceready', deviceready, true);
+	document.addEventListener('deviceready', deviceready, false);
 });
