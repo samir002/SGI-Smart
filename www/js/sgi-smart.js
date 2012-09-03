@@ -28,8 +28,11 @@ deviceready = function(){
 	$('#tomar-foto').unbind('tap').bind('tap', function(event, ui){
 		navigator.camera.getPicture(pictureSuccess, error, { quality: 75, targetWidth: 1024, targetHeight: 1024, destinationType: Camera.DestinationType.FILE_URI });
 	});
-	$('#upload-info').unbind('tap').bind('tap', function(event, ui){
+	$('#reset-info').unbind('tap').bind('tap', function(event, ui){
 		
+	});
+	$('#upload-info').unbind('tap').bind('tap', function(event, ui){
+		$('#fotos').empty();
 	});
 };
 
