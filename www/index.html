@@ -25,24 +25,36 @@
 			</p>
 		</div>
 	</div>
-	<div data-role="page" id="capture-site">
-		<div data-role="header">
+	<div data-role="page" id="config" data-transition="slide">
+		<div data-role="header" data-position="fixed">
+			<h1>Configuraciones</h1>
+		</div>
+	</div>
+	<div data-role="page" id="capture-site" data-transition="slide">
+		<div data-role="header" data-position="fixed">
 			<h1>Agregar un sitio</h1>
 		</div>
 
 		<div data-role="content">
 			<h2>Datos del sitio</h2>
 			<form id="datos_sitio">
+			
 			<label for="codigo">Identificador(Código):</label>
-    		<input type="text" name="codigo" id="codigo" value=""  />
+    		<input type="text" name="codigo" id="codigo" value="" />
+    		
     		<label for="descripcion">Descripción:</label>
     		<textarea name="descripcion" id="descripcion"></textarea>
+			
 			<button type="button" id="tomar-foto">Adjuntar una foto</button>
+			
 			<div id="fotos"></div>
+    		
     		<label for="latitud">Latitud:</label>
-    		<input type="text" name="latitud" id="latitud" value=""  />
+    		<input type="text" name="latitud" id="latitud" placeholder="Esperando ubicación" value="" />
+    		
     		<label for="longitud">Longitud:</label>
-    		<input type="text" name="longitud" id="longitud" value=""  />
+    		<input type="text" name="longitud" id="longitud" placeholder="Esperando ubicación" value="" />
+    		
     		<button type="button" id="upload-info">Subir a la web</button>
 			</form>
 		</div>
