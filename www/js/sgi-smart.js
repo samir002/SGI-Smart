@@ -1,6 +1,5 @@
 error = function(error){
-	alert('code: '    + error.code    + '\n' +
-	          'message: ' + error.message + '\n');
+	alert(error);
 };
 
 errorLog = function(error){
