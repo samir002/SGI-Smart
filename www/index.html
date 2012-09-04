@@ -2,67 +2,104 @@
 <html>
 <head>
 <title>SGI Smart</title>
-<meta charset="utf-8"/>
-<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.1.1.min.css" />
-<link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.1.1.min.css" />
-<link rel="stylesheet" type="text/css" href="css/index.css" />
-<script type="text/javascript" charset="utf-8" src="cordova-2.0.0.js"></script>
-<script type="application/x-javascript" charset="utf-8" src="js/jquery-1.8.0.min.js"></script>
-<script type="application/x-javascript" charset="utf-8" src="js/jquery.mobile-1.1.1.min.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/sgi-smart.js"></script>
+<meta charset='utf-8' />
+<link rel='stylesheet' type='text/css'
+	href='css/jquery.mobile.structure-1.1.1.min.css' />
+<link rel='stylesheet' type='text/css'
+	href='css/jquery.mobile.theme-1.1.1.min.css' />
+<link rel='stylesheet' type='text/css' href='css/jqm-datebox-1.1.0.css' />
+<link rel='stylesheet' type='text/css' href='css/index.css' />
+<script type='text/javascript' charset='utf-8' src='cordova-2.0.0.js'></script>
+<script type='text/javascript' charset='utf-8'
+	src='js/jquery-1.8.0.min.js'></script>
+<script type='text/javascript' charset='utf-8'
+	src='js/jquery.mobile-1.1.1.min.js'></script>
+<script type='text/javascript' charset='utf-8' src='js/sgi-smart.js'></script>
 </head>
 <body>
-	<div data-role="page">
+	<div data-role='page'>
 
-		<div data-role="header">
+		<div data-role='header'>
 			<h1>SGI Smart</h1>
 		</div>
 
-		<div data-role="content">
+		<div data-role='content'>
 			<p>
-				<p><a href="#capture-site" data-role="button">Ingresar sitio</a></p>
-				<a href="skype:jsnoriegam?call" data-role="button">Contactanos por Skype</a>
+			<p>
+				<a href='#capture-site' data-role='button'>Ingresar sitio</a>
+			</p>
+			<a href='skype:jsnoriegam?call' data-role='button'>Contactanos
+				por Skype</a>
 			</p>
 		</div>
 	</div>
-	<div data-role="page" id="config" data-transition="slide">
-		<div data-role="header" data-position="fixed">
+	<div data-role='page' id='config' data-transition='slide'>
+		<div data-role='header' data-position='fixed'>
 			<h1>Configuraciones</h1>
 		</div>
 	</div>
-	<div data-role="page" id="capture-site" data-transition="slide">
-		<div data-role="header" data-position="fixed">
+	<div data-role='page' id='capture-site' data-transition='slide'>
+		<div data-role='header' data-position='fixed'>
 			<h1>Agregar un sitio</h1>
 		</div>
 
-		<div data-role="content">
+		<div data-role='content'>
 			<h2>Datos del sitio</h2>
-			<form id="datos_sitio">
-			
-			<label for="codigo">Identificador(Código):</label>
-    		<input type="text" name="codigo" id="codigo" value="" />
-    		
-    		<label for="descripcion">Descripción:</label>
-    		<textarea name="descripcion" id="descripcion"></textarea>
-			
-			<button type="button" id="tomar-foto">Adjuntar una foto</button>
-			
-			<div id="fotos"></div>
-    		
-    		<label for="latitud">Latitud:</label>
-    		<input type="text" name="latitud" id="latitud" placeholder="Esperando ubicación" value="" />
-    		
-    		<label for="longitud">Longitud:</label>
-    		<input type="text" name="longitud" id="longitud" placeholder="Esperando ubicación" value="" />
-    		
-    		<label for="longitud">Programar visita:</label>
-    		<input type="date" name="visita-fecha" id="visita-fecha" value="" />
-    		<input type="time" name="visita-hora" id="visita-hora" value="" />
-    		
-    		<div data-role="controlgroup" data-type="horizontal">
-    		<button type="submit" id="upload-info">Subir a la web</button>
-    		<button type="reset" id="reset-info">Cancelar</button>
-    		</div>
+			<form id='datos_sitio'>
+
+				<label for='codigo'>Identificador(Código):</label>
+				<input type='text' name='codigo' id='codigo' value='' />
+				
+				<label for='descripcion'>Descripción:</label>
+				<textarea name='descripcion' id='descripcion'></textarea>
+
+				<button type='button' id='tomar-foto'>Adjuntar una foto</button>
+
+				<div id='fotos'></div>
+
+				<label for='latitud'>Latitud:</label>
+				<input type='text' name='latitud' id='latitud' value='' placeholder='Esperando ubicación' />
+				
+				<label for='longitud'>Longitud:</label>
+				<input type='text' name='longitud' id='longitud' value='' placeholder='Esperando ubicación' />
+
+				<label for="select-choice-day">Programar visita:</label>
+				<div data-role="controlgroup" data-type="horizontal">
+					<select class="visita" name="select-choice-day" id="select-choice-day">
+						<option>Día</option>
+					</select>
+					<select class="visita" name="select-choice-month" id="select-choice-month">
+						<option>Mes</option>
+						<option value="1">Enero</option>
+						<option value="2">Febrero</option>
+						<option value="3">Marzo</option>
+						<option value="4">Abril</option>
+						<option value="5">Mayo</option>
+						<option value="6">Junio</option>
+						<option value="7">Julio</option>
+						<option value="8">Agosto</option>
+						<option value="9">Septiembre</option>
+						<option value="10">Octubre</option>
+						<option value="11">Noviembre</option>
+						<option value="12">Diciembre</option>
+					</select>
+					<select class="visita" name="select-choice-year" id="select-choice-year">
+						<option>Año</option>
+					</select>
+				</div>
+				<div data-role="controlgroup" data-type="horizontal">
+					<select class="visita" name="select-choice-hour" id="select-choice-hour">
+						<option>Hora</option>
+					</select>
+					<select class="visita" name="select-choice-minute" id="select-choice-minute">
+						<option>Minuto</option>
+					</select>
+				</div>
+
+				<div data-role='controlgroup' data-type='horizontal'>
+					<button type='button' id='upload-info'>Subir a la web</button>
+					<button type='reset' id='reset-info'>Cancelar</button>
+				</div>
 			</form>
 		</div>
 	</div>
